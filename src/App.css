@@ -1,0 +1,136 @@
+.App {
+  padding-top: 100px;
+}
+.wrapper {
+  text-align: center;
+  max-width: 480px;
+  background-color: #ffffff;
+  margin: 0 auto;
+  padding: 16px;
+}
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.text-input {
+  font-size: 14px;
+  line-height: 18px;
+  color: #282c34;
+  padding: 8px 16px;
+  width: 100%;
+  border: none;
+  border-radius: 3px;
+}
+
+.text-input:focus {
+  box-shadow: 0 0 3px #282c34;
+  outline: none;
+}
+
+.todo-list {
+  margin: 0;
+  padding: 0;
+  padding-top: 24px;
+}
+
+li {
+  list-style: none;
+}
+
+.todo-item-view-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 8px 12px;
+  position: relative;
+}
+
+.todo-item-view-wrapper input {
+  width: 40px;
+  /* auto, since non-WebKit browsers doesn't support input styling */
+  height: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  border: none; /* Mobile Safari */
+  -webkit-appearance: none;
+  appearance: none;
+  opacity: 0;
+  z-index: 1;
+}
+
+.todo-item-view-wrapper input + label {
+  padding-left: 32px;
+  position: relative;
+  display: block;
+  word-break: break-all;
+  text-align: left;
+  flex-grow: 1;
+}
+
+.todo-item-view-wrapper input + label::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  border: 1px solid #dddddd;
+  border-radius: 20px;
+  position: absolute;
+  top: 0px;
+  left: 0;
+}
+
+.todo-item-view-wrapper input:checked + label::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #dddddd;
+  border-radius: 20px;
+  position: absolute;
+  top: 6px;
+  left: 6px;
+}
+
+.todo-item-view-wrapper input:checked + label {
+  text-decoration: line-through;
+}
+
+.todo-item-view-wrapper button {
+  font-size: 16px;
+  font-weight: 200;
+  border: none;
+  background-color: transparent;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  color: #dddddd;
+}
+
+.filters-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.filters-list button {
+  background-color: #ffffff;
+  border: 2px solid #ffffff;
+  cursor: pointer;
+  font-size: 12px;
+  border-radius: 2px;
+  padding: 2px 4px;
+}
+
+.filters-list button.active {
+  border-color: #dddddd;
+}
+
+.footer-wrapper {
+  padding-top: 24px;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+}
